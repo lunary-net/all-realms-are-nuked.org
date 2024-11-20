@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="All Realms Are Nuked - The Realms+ Nuke community from 2024.">
+    <meta name="keywords" content="Realms-">
+    <meta name="author" content="Vojtaa3181">
+    <title>All Realms Are Nuked</title>
+    <link rel="icon" href="7BuDwFzo_400x400.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #f5f5f5;
+            background: radial-gradient(circle, #1a1a1a, #0d0d0d);
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header img {
+            width: 120px;
+            border-radius: 50%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            margin-right: 20px;
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            margin: 0;
+            color: #00bfff;
+            text-shadow: 0 0 30px rgba(0, 191, 255, 0.8);
+            animation: fadeIn 2s ease-out;
+            display: flex;
+            align-items: center;
+        }
+
+        .header h1 img {
+            width: 80px;
+            height: 80px;
+            margin-left: 20px;
+            border-radius: 50%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav a {
+            margin: 0 15px;
+            padding: 12px 25px;
+            color: #f5f5f5;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .nav a:hover {
+            background: rgba(0, 0, 0, 0.9);
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        .content {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8);
+            position: relative;
+            max-width: 100%;
+            margin: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .content:hover {
+            transform: scale(1.02);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.9);
+        }
+
+        .content img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .content img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+        }
+
+        h2, h3 {
+            color: #00bfff;
+            text-shadow: 0 0 15px rgba(0, 191, 255, 0.6);
+            margin: 10px 0;
+        }
+
+        h2 {
+            font-size: 3em;
+            border-bottom: 4px solid #00bfff;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            margin: 20px 0;
+        }
+
+        p, ul {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #fff;
+            font-size: 1.1em;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #555;
+            background: #333;
+            color: #eee;
+            font-size: 1.1em;
+            transition: border-color 0.3s, background-color 0.3s;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: #00bfff;
+            background: #444;
+        }
+
+        button {
+            padding: 12px 24px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        button:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            margin: 0 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .social-links a img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .social-links a:hover {
+            transform
+                  .language-menu label:hover {
+            background: #333;
+            color: #fff;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1.1em;
+            color: #00bfff;
+            font-weight: bold;
+        }
+
+        footer p b {
+            color: #00bfff;
+            text-shadow: 0 0 10px rgba(0, 191, 255, 0.7);
+        }
+
+        hr {
+            border: 0;
+            height: 2px;
+            background: #00bfff;
+            margin: 20px 0;
+            border-radius: 1px;
+        }
+    </style>
+</head>
+
+<body onload="changeLanguage('en')">
+    <div class="container">
+        <div class="header gradient-background">
+            <img src="https://www.bisecthosting.com/blog/wp-content/uploads/2022/11/lunar-client-300x300.webp" alt="Lunar Client">
+            <h1 data-translate="title" class="animated-text">Welcome to All Realms Are Nuked</h1>
+        </div>
+
+        <div class="language-select" onclick="toggleLanguageMenu()">
+            <img src="https://cdn-icons-png.flaticon.com/128/3898/3898082.png" alt="Language" title="Select Language">
+            <div id="language-menu" class="language-menu">
+                <label for="language-en">
+                    <input type="radio" id="language-en" name="language" value="en" checked onchange="changeLanguage(this.value)">
+                    English
+                </label>
+                <label for="language-de">
+                    <input type="radio" id="language-de" name="language" value="de" onchange="changeLanguage(this.value)">
+                    Deutsch
+                </label>
+                <label for="language-es">
+                    <input type="radio" id="language-es" name="language" value="es" onchange="changeLanguage(this.value)">
+                    Español
+                </label>
+                <label for="language-fr">
+                    <input type="radio" id="language-fr" name="language" value="fr" onchange="changeLanguage(this.value)">
+                    Français
+                </label>
+            </div>
+        </div>
+
+        <div class="nav">
+            <a href="#about" data-translate="about">About Us</a>
+            <a href="#server-overview" data-translate="serverOverview">Server Overview</a>
+            <a href="#features" data-translate="features">Features</a>
+            <a href="#rules" data-translate="rules">Rules</a>
+            <a href="#contact-us" data-translate="contactUs">Contact Us</a>
+        </div>
+
+        <div class="content">
+            <section id="about">
+                <h2 data-translate="about">About Us:</h2>
+                <h3>God save us</h3>
+                <b><p>We're not NSFW or gore content server</p></b>
+                <b><p>ARAS on down!</p></b>
+            </section>
+
+            <hr>
+
+            <section id="server-overview">
+                <h2 data-translate="serverOverview">Server Overview</h2>
+                <p data-translate="overviewDesc">Welcome to the All Realms Are Nuked server! Our server offers a unique gaming experience with a variety of features and game modes.</p>
+
+                <h3 data-translate="features">Features</h3>
+                <ul>
+                    <li>Why choose us - We're the guys who nuke the realms+</li>
+                    <li>Worlds not Realms - Worlds are better than realms+: you can host your world 24/7 without paying money every month</li>
+                    <li>Own programming language - we own the .vnl code language, you need to set it up just with python</li>
+                    <li>Against R+ Community - Join our community for nuking realms+</li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <section id="rules">
+                <h2 data-translate="rules">Rules</h2>
+                <ul>
+                    <li>Choose ARAN for 24/7 realms+ nuking</li>
+                    <li>We're not affiliated with Mojang, Microsoft, or Realms-</li>
+                    <li>Why we hate? We hate R+ for nuking our realms+</li>
+                    <li>All Realms Are Nuked (ARAN) is a hateful group of Realms+ haters</li>
+                    <li>We currently do not have our own R+ nuker bot</li>
+                </ul>
+            </section>
+            <p><b>We're against Realms+ community</b></p>
+
+            <footer>
+                <p><b>&copy; 2022 ARAN All rights reserved.</b></p>
+                <p><b>Last Update 14/09/2024</b></p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                title: "Welcome to All Realms Are Nuked",
+                about: "About Us:",
+                serverOverview: "Server Overview",
+                features: "Features",
+                rules: "Rules",
+                contactUs: "Contact Us",
+                aboutUsDesc: "Join our community in opposing Realms+ for a better gaming experience.",
+                overviewDesc: "Welcome to the All Realms Are Nuked server! Our server offers a unique gaming experience with a variety of features and game modes.",
+                featuresList: [
+                    "Why choose us - We're the guys who nuke the realms+",
+                    "Worlds not Realms - Worlds are better than realms+: you can host your world 24/7 without paying money every month",
+                    "Own programming language - we own the .vnl code language, you need to set it up just with python",
+                    "Against R+ Community - Join our community for nuking realms+"
+                ],
+                rulesList: [
+                    "Choose ARAN for 24/7 realms+ nuking",
+                    "We're not affiliated with Mojang, Microsoft, or Realms-",
+                    "Why we hate? We hate R+ for nuking our realms+",
+                    "All Realms Are Nuked (ARAN) is a hateful group of Realms+ haters",
+                    "We currently do not have our own R+ nuker bot"
+                ],
+            },
+            de: {
+                title: "Willkommen bei All Realms Are Nuked",
+                about: "Über uns:",
+                serverOverview: "Serverübersicht",
+                features: "Eigenschaften",
+                rules: "Regeln",
+                contactUs: "Kontaktiere uns",
+                aboutUsDesc: "Schließen Sie sich unserer Gemeinschaft an, um Realms+ für ein besseres Spielerlebnis zu bekämpfen.",
+                overviewDesc: "Willkommen auf dem All Realms Are Nuked-Server! Unser Server bietet ein einzigartiges Spielerlebnis mit einer Vielzahl von Funktionen und Spielmodi.",
+                featuresList: [
+                    "Warum uns wählen - Wir sind die Typen, die die Realms+ nukeln",
+                    "Welten, nicht Realms - Welten sind besser als Realms+: Sie können Ihre Welt 24/7 hosten, ohne jeden Monat Geld zu bezahlen",
+                    "Eigene Programmiersprache - wir besitzen die .vnl Code-Sprache, die Sie nur mit Python einrichten müssen",
+                    "Gegen R+ Community - Treten Sie unserer Gemeinschaft zum Nukeln von Realms+ bei"
+                ],
+                rulesList: [
+                    "Wählen Sie ARAN für 24/7 Realms+ nuking",
+                    "Wir sind nicht mit Mojang, Microsoft oder Realms- verbunden",
+                    "Warum wir hassen? Wir hassen R+ für das Nukeln unserer Realms+",
+                    "All Realms Are Nuked (ARAN) ist eine hasserfüllte Gruppe von Realms+ Hasser",
+                    "Wir haben derzeit keinen eigenen R+ Nuker Bot"
+                ],
+            },
+            es: {
+                title: "Bienvenidos a All Realms Are Nuked",
+                about: "Sobre nosotros:",
+                serverOverview: "Descripción del servidor",
+                features: "Características",
+                rules: "Reglas",
+                contactUs: "Contáctenos",
+                aboutUsDesc: "Únase a nuestra comunidad para oponerse a Realms+ para una mejor experiencia de juego.",
+                overviewDesc: "Bienvenido al servidor de All Realms Are Nuked! Nuestro servidor ofrece una experiencia de juego única con una variedad de características y modos de juego.",
+                                featuresList: [
+                    "Por qué elegirnos: somos los chicos que nukean los realms+",
+                    "Mundos, no Realms: los mundos son mejores que los realms+: puedes hospedar tu mundo 24/7 sin pagar dinero cada mes",
+                    "Lenguaje de programación propio: tenemos el lenguaje de código .vnl, que necesitas configurar solo con python",
+                    "Comunidad contra R+: Únase a nuestra comunidad para nukear realms+"
+                ],
+                rulesList: [
+                    "Elige ARAN para nukear realms+ 24/7",
+                    "No estamos afiliados con Mojang, Microsoft o Realms-",
+                    "¿Por qué odiamos? Odiamos R+ por nukear nuestros realms+",
+                    "All Realms Are Nuked (ARAN) es un grupo de odio contra Realms+",
+                    "Actualmente no tenemos nuestro propio bot nuker de R+"
+                ],
+            },
+            fr: {
+                title: "Bienvenue à All Realms Are Nuked",
+                about: "À propos de nous:",
+                serverOverview: "Aperçu du serveur",
+                features: "Caractéristiques",
+                rules: "Règles",
+                contactUs: "Contactez-nous",
+                aboutUsDesc: "Rejoignez notre communauté pour s'opposer à Realms+ pour une meilleure expérience de jeu.",
+                overviewDesc: "Bienvenue sur le serveur All Realms Are Nuked! Notre serveur offre une expérience de jeu unique avec une variété de fonctionnalités et de modes de jeu.",
+                featuresList: [
+                    "Pourquoi nous choisir: nous sommes les gars qui nukent les realms+",
+                    "Mondes, pas Realms: les mondes sont meilleurs que les realms+: vous pouvez héberger votre monde 24/7 sans payer d'argent chaque mois",
+                    "Langage de programmation propre: nous avons le langage de code .vnl que vous devez configurer seulement avec python",
+                    "Communauté contre R+: Rejoignez notre communauté pour nuker les realms+"
+                ],
+                rulesList: [
+                    "Choisissez ARAN pour nuker les realms+ 24/7",
+                    "Nous ne sommes pas affiliés à Mojang, Microsoft ou Realms-",
+                    "Pourquoi nous détestons? Nous détestons R+ pour avoir nuké nos realms+",
+                    "All Realms Are Nuked (ARAN) est un groupe haineux contre Realms+",
+                    "Nous n'avons actuellement pas notre propre bot nuker de R+"
+                ],
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.querySelectorAll("[data-translate]").forEach(element => {
+                const key = element.getAttribute("data-translate");
+                if (key === "features") {
+                    element.innerHTML = translations[lang][key];
+                    const listItems = translations[lang]["featuresList"].map(item => `<li>${item}</li>`).join("");
+                    document.querySelector("#server-overview ul").innerHTML = listItems;
+                } else if (key === "rules") {
+                    element.innerHTML = translations[lang][key];
+                    const rulesItems = translations[lang]["rulesList"].map(item => `<li>${item}</li>`).join("");
+                    document.querySelector("#rules ul").innerHTML = rulesItems;
+                } else {
+                    element.innerHTML = translations[lang][key] || "";
+                }
+            });
+        }
+
+        function toggleLanguageMenu() {
+            const menu = document.getElementById("language-menu");
+            menu.classList.toggle("show");
+        }
+    </script>
+    <footer>
+        <p><b>&copy; 2022 ARAN All rights reserved.</b></p>
+        <p><b>Last Update 14/09/2024</b></p>
+        <p><b><a href="mailto:vojtaa3181@gmail.com">Contact Us</a></b></p>
+    </footer>
+</body>
+</html>
+ 
