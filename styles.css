@@ -1,0 +1,59 @@
+body { 
+    background-image: url('atom.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;  }
+h1, h2 {
+    color: rgb(255, 255, 255);
+    font-style: normal;
+    font-family: cursive;
+}
+header {
+    background-color: rgba(246, 19, 133, 0.467);
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-list li {
+    transition: transform 0.3s ease;
+}
+
+.nav-list li:hover {
+    transform: scale(1.1);
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-list li a:hover {
+    color: #710fe0;
+}
+h3 {
+    color: #ffffff;
+    font-family: cursive;
+}
+p {
+    color: #ffffff;
+    font-family: system-ui;
+}
+hr {
+    color: darkblue
+}
